@@ -1,0 +1,30 @@
+{
+  "title": "Ahrefs Domain Rating Checker",
+  "description": "Get free Domain Rating (DR) from Ahrefs for any list of domains or URLs.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "urls": {
+      "title": "Domains / URLs",
+      "type": "array",
+      "description": "List of domains or URLs to retrieve Domain Rating for. One URL/domain per line.",
+      "editor": "stringList",
+      "prefill": [
+        "google.com",
+        "github.com",
+        "ahrefs.com"
+      ]
+    },
+    "proxyConfiguration": {
+      "title": "Proxy configuration",
+      "type": "object",
+      "description": "Use Apify Proxy for reliable API requests.",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": false
+      }
+    }
+  },
+  "required": ["urls"],
+  "additionalProperties": false
+}

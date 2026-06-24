@@ -1,0 +1,59 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "target": {
+      "title": "Target",
+      "type": "string",
+      "description": "The URL or domain that was checked."
+    },
+    "domain_rating": {
+      "title": "Domain Rating",
+      "type": "integer",
+      "description": "The Domain Rating (DR) score of the target domain."
+    },
+    "license": {
+      "title": "License",
+      "type": "string",
+      "description": "The license terms URL for using Ahrefs Domain Rating data."
+    },
+    "attribution": {
+      "title": "Attribution",
+      "type": "string",
+      "description": "Attribution text required by Ahrefs."
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "target",
+          "domain_rating",
+          "license",
+          "attribution"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "target": {
+            "label": "Target",
+            "format": "text"
+          },
+          "domain_rating": {
+            "label": "Domain Rating",
+            "format": "number"
+          },
+          "license": {
+            "label": "License",
+            "format": "link"
+          },
+          "attribution": {
+            "label": "Attribution",
+            "format": "text"
+          }
+        }
+      }
+    }
+  }
+}
